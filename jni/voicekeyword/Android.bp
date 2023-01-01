@@ -1,0 +1,26 @@
+cc_library_shared {
+    name: "libvoicerecognition_jni",
+    srcs: [
+        "android_voicecmd_VoiceRecognition.cpp",
+    ],
+    include_dirs: [
+        // voiceunlock2
+        "vendor/mediatek/proprietary/external",
+    ],
+    shared_libs: [
+        "libui",
+        "libutils",
+        "libbinder",
+        "libandroid_runtime",
+        "libnativehelper",
+        "libcutils",
+        "libmedia",
+        "libvoicerecognition",
+        "liblog",
+    ],
+    header_libs: [
+        "libmediametrics_headers",
+        "jni_headers",
+    ],
+    owner: "mtk",
+}

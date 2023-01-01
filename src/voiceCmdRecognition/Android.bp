@@ -1,0 +1,39 @@
+cc_library_shared {
+    name: "libvoicerecognition",
+    srcs: [
+        "VoiceCmdRecognition.cpp",
+    ],
+    include_dirs: [
+        "vendor/mediatek/proprietary/external",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libstagefright",
+        "libstagefright_foundation",
+        "libmedia",
+        "libstdc++",
+        "libgui",
+        "libdl",
+        "libsqlite",
+        "libaudiotoolkit",
+        "libaudioclient",
+        "liblog",
+        "libxml2",
+        // Power Hal
+        "libhidlbase",
+        "vendor.mediatek.hardware.mtkpower@1.0",
+    ],
+    header_libs: [
+        "libaudio_param_parser_headers",
+        "libmediametrics_headers",
+        "libpowerhal_util_headers",
+    ],
+    cflags: [
+        "-DSYS_IMPL",
+    ],
+    static_libs: [
+        "libaudiostream",
+    ],
+    owner: "mtk",
+}

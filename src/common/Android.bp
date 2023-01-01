@@ -1,0 +1,17 @@
+cc_library_static {
+    name: "libaudiostream",
+    srcs: [
+        "AudioStream.cpp",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libstagefright",
+        "libstagefright_foundation",
+        "libmedia",
+    ],
+    header_libs: [
+        "libmediametrics_headers",
+    ],
+    owner: "mtk",
+}
